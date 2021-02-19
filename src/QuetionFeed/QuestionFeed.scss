@@ -1,0 +1,22 @@
+.QuestionFeed {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.question-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
