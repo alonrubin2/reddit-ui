@@ -7,8 +7,15 @@ import './QuestionFeed.scss';
 function QuestionFeed() {
 
     function submit(values) {
-        console.log(values);
-        return values = '';
+        fetch('http://localhost:4000/question',
+            {
+                method: 'PUT', 
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(values)
+            });
+            
     }
 
 
@@ -26,9 +33,9 @@ function QuestionFeed() {
                     </div>
                     <div className="form-group">
                         <h2>Question</h2>
-                        <label htmlFor="question" >Question</label>
-                        <Field className="form-control" id="question" name="question" />
-                        <ErrorMessage className="errMsg" name="question" component="div" />
+                        <label htmlFor="content" >Question</label>
+                        <Field className="form-control" id="content" name="content" />
+                        <ErrorMessage className="errMsg" name="content" component="div" />
                     </div>
                     <div className="form-group">
                         <button className="btn" type="submit">Submit</button>
